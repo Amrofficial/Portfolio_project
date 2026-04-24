@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>anmar@core-router</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet">
+
+<style>
+  /* Background canvas */
+#bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+/* Keep content above */
+.container {
+  position: relative;
+  z-index: 1;
+}
+
+/* Optional subtle scanline effect */
+body::after {
+  content: "";
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: repeating-linear-gradient(
+    to bottom,
+    rgba(0,255,0,0.03),
+    rgba(0,255,0,0.03) 1px,
+    transparent 2px,
+    transparent 4px
+  );
+  pointer-events: none;
+}
+
+body {
+  margin: 0;
+  background: #000;
+  color: #00ff00;
+  font-family: 'Source Code Pro', monospace;
+  line-height: 1.6;
+}
+
+/* Layout */
+.container {
+  padding: 20px;
+  max-width: 900px;
+  margin: auto;
+}
+
+/* Sections */
+.section {
+  margin-bottom: 40px;
+}
+
+.section-title {
+  color: #00ff00;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+.section-title::after {
+  content: ":";
+  color: #009900;
+}
+
+/* Divider */
+.line {
+  border-top: 1px solid #003300;
+  margin: 10px 0 20px;
+}
+
+/* Fiber Timeline */
+.timeline {
+  position: relative;
+  padding-left: 30px;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 10px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: #003300;
+}
+
+.event {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.event::before {
+  content: "";
+  position: absolute;
+  left: -22px;
+  top: 5px;
+  width: 10px;
+  height: 10px;
+  background: #00ff00;
+  border-radius: 50%;
+}
+
+/* Fiber pulse */
+.pulse {
+  position: absolute;
+  left: 10px;
+  width: 2px;
+  height: 10px;
+  background: #00ff00;
+  animation: pulseMove 2s linear infinite;
+}
+
+@keyframes pulseMove {
+  from { top: 0; }
+  to { top: 100%; }
+}
+
+/* Text styles */
+.muted {
+  color: #009900;
+}
+
+h1
+{ 
+  font-weight: 100;
+  
+}
+
+</style>
+</head>
+
+<body>
+<canvas id="bg"></canvas>
+<div class="container">
+
+<!-- HEADER -->
+<div class="section">
+<div class="section-title">[ SYSTEM INFO Anmar@Noc_Support ]  </div>
+<div class="line"></div>
+
+Name: Anmar Ashraf<br>
+Role: Layer 1 Network Engineer<br>
+Location: Bangalore, India<br>
+</div>
+
+<!-- PROFILE -->
+<div class="section">
+<div class="section-title">[ PROFILE ]</div>
+<div class="line"></div>
+
+MPLS backbone-focused network engineer working on Cisco NCS platforms.<br>
+Experience in node integration, IOS XR upgrades, and fiber link provisioning.<br>
+</div>
+
+<!-- SKILLS -->
+<div class="section">
+<div class="section-title">[ PROTOCOL STACK ]</div>
+<div class="line"></div>
+
+Routing & Service Provider:<br>
+MPLS (L2VPN, L3VPN), BGP, MP-BGP, IS-IS, OSPF, Static Routing, BFD<br><br>
+
+Switching & Layer 2:<br>
+VLAN, Trunking, Inter-VLAN Routing, STP, RSTP, MSTP, LACP, PAgP<br><br>
+
+IP & Fundamentals:<br>
+IPv4, IPv6, Subnetting, CIDR, DHCP, DNS, ARP, OSI, TCP/IP<br><br>
+
+Cisco Platforms:<br>
+IOS, IOS XR, NCS55A2, NCS57C3, MPA Modules, Optical (SFP/QSFP)<br><br>
+
+Monitoring & Troubleshooting:<br>
+Ping, Traceroute, SNMP, Syslog, NTP, Interface & Controller Analysis<br><br>
+
+Security:<br>
+ACLs, Port Security, DHCP Snooping, DAI, Basic Cryptography, PKI<br><br>
+
+Automation & Tools:<br>
+Python (Basic), Linux, Config Deployment (Butterfly Tool)<br>
+
+</div>
+<!-- EXPERIENCE -->
+<div class="section">
+<div class="section-title">[ EXPERIENCE / SIGNAL FLOW ]</div>
+<div class="line"></div>
+
+<div class="timeline">
+
+<div class="pulse"></div>
+
+<div class="event">
+Teleindia Networks Pvt Ltd<br>
+<span class="muted">L1 Network Engineer</span><br><br>
+
+- MPLS node integration<br>
+- IOS XR upgrades<br>
+- Fiber link provisioning<br>
+- NOC coordination<br>
+</div>
+
+<div class="event">
+D2Call<br>
+<span class="muted">VoIP Technical Executive</span><br><br>
+
+- SIP troubleshooting<br>
+- Network diagnostics<br>
+- Customer issue resolution<br>
+</div>
+
+</div>
+</div>
+
+<!-- PROJECTS -->
+<div class="section">
+<div class="section-title">[ OPERATIONS ]</div>
+<div class="line"></div>
+
+- MPLS Node Integration (Live Network)<br>
+- IOS XR Upgrade Execution<br>
+- Fiber Link Deployment<br>
+- MOP Planning & Execution<br>
+</div>
+
+<!-- CONTACT -->
+<div class="section">
+<div class="section-title">[ CONTACT ]</div>
+<div class="line"></div>
+
+Email: anmarofficial@gmail.com<br>
+Phone: +91 7561057155<br>
+LinkedIn: linkedin.com/in/anmar-ashraf<br>
+</div>
+
+</div>
+
+<script>
+const canvas = document.getElementById("bg");
+const ctx = canvas.getContext("2d");
+
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+let streams = [];
+
+// create flowing lines (like data)
+for (let i = 0; i < 40; i++) {
+  streams.push({
+    x: Math.random() * canvas.width,
+    y: Math.random() * canvas.height,
+    speed: Math.random() * 1 + 0.5,
+    length: Math.random() * 80 + 20
+  });
+}
+
+function animate() {
+  ctx.fillStyle = "rgba(0,0,0,0.15)";
+  ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+  ctx.strokeStyle = "rgba(0,255,0,0.15)";
+  ctx.lineWidth = 1;
+
+  streams.forEach(s => {
+    ctx.beginPath();
+    ctx.moveTo(s.x, s.y);
+    ctx.lineTo(s.x, s.y + s.length);
+    ctx.stroke();
+
+    s.y += s.speed;
+
+    if (s.y > canvas.height) {
+      s.y = -s.length;
+      s.x = Math.random() * canvas.width;
+    }
+  });
+
+  requestAnimationFrame(animate);
+}
+
+animate();
+
+// Resize fix
+window.addEventListener("resize", () => {
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+});
+</script>
+</body>
+</html>
