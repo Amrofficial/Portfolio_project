@@ -18,6 +18,52 @@
   z-index: 0;
 }
 
+/* Skills Grid */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns */
+  gap: 15px;
+}
+
+/* Skill Box  */
+.skill-box {
+  border: 1px solid #003300;
+  padding: 12px;
+  background: rgba(0, 255, 0, 0.02);
+}
+
+.skill-title {
+  color: #00ff00;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.skill-box:hover {
+  border-color: #00ff00;
+  box-shadow: 0 0 8px #00ff00;
+}
+
+/* skill list css */
+.skill-box ul {
+  margin: 0;
+  padding-left: 15px;
+  list-style: none;
+}
+
+.skill-box li {
+  position: relative;
+  margin-bottom: 4px;
+  padding-left: 10px;
+}
+
+.skill-box li::before {
+  content: ">";
+  position: absolute;
+  left: 0;
+  color: #00ff00;
+}
+
+
 /* Keep content above */
 .container {
   position: relative;
@@ -174,13 +220,19 @@ h1
     Name: Anmar Ashraf<br>
     Role: Layer 1 Network Engineer<br>
     Location: Bangalore, India<br>
+    <a class="muted" href="https://linkedin.com/in/anmar-ashraf" target="_blank">View my Linkedin profile </a> <br>
+
   </div>
-
 </div>
 </div>
 
-<div>
-  <br>
+<!-- CONTACT -->
+<div class="section">
+<div class="section-title">[ CONTACT ]</div>
+<div class="line"></div>
+
+Email:<a class="muted" href="mailto:anmarofficial@gmail.com">anmarofficial@gmail.com</a><br>
+Phone: +91 7561057155<br>
 </div>
 
 
@@ -188,9 +240,16 @@ h1
 <div class="section">
 <div class="section-title">[ PROFILE ]</div>
 <div class="line"></div>
+CCNA-certified Network Engineer with hands-on experience in telecom service provider environments, working
+on Cisco NCS series routers and MPLS-based networks. Experienced in node integration, link upgrades,
+IOS/SMU upgrades, and L2/L3 VPN operations.,<br><br>
 
-MPLS backbone-focused network engineer working on Cisco NCS platforms.<br>
-Experience in node integration, IOS XR upgrades, and fiber link provisioning.<br>
+Transitioned into IT in 2025 after managing a family business, bringing strong problem-solving and customer-
+handling skills, Strong self-driven learning and deep interest in networking by actively studying technologies,<br>
+performing lab practice, and building expertise in routing protocols, network automation (Python),Linux
+Environment <br><br>
+Currently progressing toward CCNP Enterprise with a long-term goal of specializing in core network
+engineering and large-scale infrastructure operations<br> 
 </div>
 
 <!-- SKILLS -->
@@ -198,31 +257,102 @@ Experience in node integration, IOS XR upgrades, and fiber link provisioning.<br
 <div class="section-title">[ PROTOCOL STACK ]</div>
 <div class="line"></div>
 
-Routing & Service Provider:<br>
-MPLS (L2VPN, L3VPN), BGP, MP-BGP, IS-IS, OSPF, Static Routing, BFD<br><br>
+<div class="skills-grid">
 
-Switching & Layer 2:<br>
-VLAN, Trunking, Inter-VLAN Routing, STP, RSTP, MSTP, LACP, PAgP<br><br>
+<div class="skill-box">
+  <div class="skill-title">Routing & SP</div>
+  <ul>
+    <li>MPLS (L2VPN, L3VPN)</li>
+    <li>BGP, MP-BGP</li>
+    <li>OSPF, IS-IS</li>
+    <li>Static, BFD</li>
+  </ul>
+</div>
 
-IP & Fundamentals:<br>
-IPv4, IPv6, Subnetting, CIDR, DHCP, DNS, ARP, OSI, TCP/IP<br><br>
+<div class="skill-box">
+  <div class="skill-title">Switching</div>
+  <ul>
+    <li>VLAN, Trunking</li>
+    <li>Inter-VLAN Routing</li>
+    <li>STP, RSTP, MSTP</li>
+    <li>LACP, PAgP</li>
+  </ul>
+</div>
 
-Cisco Platforms:<br>
-IOS, IOS XR, NCS55A2, NCS57C3, MPA Modules, Optical (SFP/QSFP)<br><br>
+<div class="skill-box">
+  <div class="skill-title">IP & Fundamentals</div>
+  <ul>
+    <li>IPv4, IPv6</li>
+    <li>Subnetting, CIDR</li>
+    <li>DHCP, DNS, ARP</li>
+    <li>OSI, TCP/IP</li>
+  </ul>
+</div>
 
-Monitoring & Troubleshooting:<br>
-Ping, Traceroute, SNMP, Syslog, NTP, Interface & Controller Analysis<br><br>
+<div class="skill-box">
+  <div class="skill-title">Cisco Platforms</div>
+  <ul>
+    <li>IOS, IOS XR</li>
+    <li>NCS55A2, NCS57C3</li>
+    <li>MPA Modules</li>
+    <li>SFP, QSFP</li>
+  </ul>
+</div>
 
-Security:<br>
-ACLs, Port Security, DHCP Snooping, DAI, Basic Cryptography, PKI<br><br>
+<div class="skill-box">
+  <div class="skill-title">Monitoring</div>
+  <ul>
+    <li>Ping, Traceroute</li>
+    <li>SNMP, Syslog</li>
+    <li>NTP</li>
+    <li>Interface Analysis</li>
+  </ul>
+</div>
 
-Automation & Tools:<br>
-Python (Basic), Linux, Config Deployment (Butterfly Tool)<br>
+<div class="skill-box">
+  <div class="skill-title">Security</div>
+  <ul>
+    <li>ACLs</li>
+    <li>Port Security</li>
+    <li>DHCP Snooping</li>
+    <li>DAI, PKI</li>
+  </ul>
+</div>
+
+<div class="skill-box">
+<div class="skill-title">Automation</div>
+<ul>
+<li>Python (Basic)</li>
+<li>Linux</li>
+<li>Butterfly Tool</li>
+</ul>
+</div>
+
+<div class="skill-box">
+<div class="skill-title">Cybersecurity fundamentals (Basics)</div>
+<ul > 
+<li>Common network threats, Security controls, Basic mitigation techniques</li> 
+<li>Linux Basics</li>
+<li>Cryptography, SSL-TLS handshake Fundamentals</li>
+</ul>
+</div>
+
+
+
+
+
+
+
+
 
 </div>
+
+</div>
+
+
 <!-- EXPERIENCE -->
 <div class="section">
-<div class="section-title">[ EXPERIENCE / SIGNAL FLOW ]</div>
+<div class="section-title">[ EXPERIENCE ]</div>
 <div class="line"></div>
 
 <div class="timeline">
@@ -271,7 +401,7 @@ D2Call<br>
 <div class="line"></div>
 
 Bachelor of Computer Applications (BCA)<br>
-<span class="muted">Pondicherry University</span><br><br>
+<span class="muted">Pondicherry University</span><br>
 </div>
 
 <!-- CERTIFICATIONS -->
@@ -280,23 +410,16 @@ Bachelor of Computer Applications (BCA)<br>
 <div class="line"></div>
 
 CCNA – Cisco Certified Network Associate<br>
-<span class="muted">Credential ID: CSCO14925479</span><br><br>
+<span class="muted">Credential ID: CSCO14925479</span><br>
+<a class="muted" href="https://www.credly.com/badges/4a1751e7-545e-4347-bdfb-02681ba67452/public_url"
+ target="_blank">View CCNA Badge</a>
+<br><br>  
 
 CCNP Enterprise (ENCOR)<br>
 <span class="muted">In Progress</span><br>
 
 </div>
 
-
-<!-- CONTACT -->
-<div class="section">
-<div class="section-title">[ CONTACT ]</div>
-<div class="line"></div>
-
-Email: anmarofficial@gmail.com<br>
-Phone: +91 7561057155<br>
-LinkedIn: linkedin.com/in/anmar-ashraf<br>
-</div>
 
 </div>
 
