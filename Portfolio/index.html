@@ -300,57 +300,6 @@ LinkedIn: linkedin.com/in/anmar-ashraf<br>
 
 </div>
 
-<!-- <script>
-const canvas = document.getElementById("bg");
-const ctx = canvas.getContext("2d");
-
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
-
-let streams = [];
-
-// create flowing lines (like data)
-for (let i = 0; i < 40; i++) {
-  streams.push({
-    x: Math.random() * canvas.width,
-    y: Math.random() * canvas.height,
-    speed: Math.random() * 1 + 0.5,
-    length: Math.random() * 80 + 20
-  });
-}
-
-function animate() {
-  ctx.fillStyle = "rgba(0,0,0,0.15)";
-  ctx.fillRect(0, 0, canvas.width, canvas.height);
-
-  ctx.strokeStyle = "rgba(0,255,0,0.15)";
-  ctx.lineWidth = 1;
-
-  streams.forEach(s => {
-    ctx.beginPath();
-    ctx.moveTo(s.x, s.y);
-    ctx.lineTo(s.x, s.y + s.length);
-    ctx.stroke();
-
-    s.y += s.speed;
-
-    if (s.y > canvas.height) {
-      s.y = -s.length;
-      s.x = Math.random() * canvas.width;
-    }
-  });
-
-  requestAnimationFrame(animate);
-}
-
-animate();
-
-// Resize fix
-window.addEventListener("resize", () => {
-  canvas.width = window.innerWidth;
-  canvas.height = window.innerHeight;
-});
-</script> -->
 
 <script>
 const canvas = document.getElementById("bg");
@@ -372,12 +321,11 @@ for (let i = 0; i < columns; i++) {
 
 function draw() {
   // dark fade (important for trail effect)
-  ctx.fillStyle = "rgba(0, 0, 0, 0.15)";
+  ctx.fillStyle = "rgba(0, 100, 0, 0.15)";
   ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-  // ctx.fillStyle = "#00ff00"; // solid green
-  // ctx.fillStyle = "rgba(0,255,0,0.08)";// faded green for softer look
-ctx.fillStyle = "rgba(0, 255, 0, 0.15)"; // slightly stronger for better visibility
+// slightly stronger for better visibility
+ctx.fillStyle = "rgba(0, 255, 0, 0.15)"; 
   ctx.font = fontSize + "px monospace";
 
   for (let i = 0; i < drops.length; i++) {
@@ -390,7 +338,7 @@ ctx.fillStyle = "rgba(0, 255, 0, 0.15)"; // slightly stronger for better visibil
       drops[i] = 0;
     }
 
-    drops[i] += fontSize *0.60; // speed
+    drops[i] += fontSize *0.70; // speed
   }
 
   requestAnimationFrame(draw);
